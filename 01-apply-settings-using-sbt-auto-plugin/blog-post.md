@@ -29,7 +29,7 @@ lazy val util = (project in file("util"))
   )
 ```
 
-What if you want some settings to be applied if some plugins where enabled on the project? Of course you can create another `Seq` of settings and use wherever appropriate.
+Now suppose that you've enabled a plugin for some projects. Let's say `DockerPlugin` (from `sbt-native-packager`) and you want to set `daemonUser` for all that projects. Of course again you can create another `Seq` of the common settings for the corresponding plugin and use wherever appropriate.
 
 ```sbt
 lazy val commonSettings = Seq(
@@ -62,9 +62,9 @@ lazy val util = (project in file("util"))
   )
 ```
 
-But you have to take care of that and add the plugin-specific common settings on the project for which the plugin is enabled.
+But you have to be careful to add those plugin-specific common settings to the projects for which the plugin is enabled.
 
-You can have SBT to do that for you. You can ask SBT to enable an auto plugin for projects based on . This is possible using SBT **auto plugins**.
+Fortunately we can have SBT to do that for us. You can ask SBT to automatically enable a plugin only for projects on which another specific plugin is enabled. This is possible using SBT **auto plugins**.
 
 Create an Scala file (with `.scala` extension) in your `project` directory which extends `AutoPlugin`. That's how you create SBT auto plugins:
 
