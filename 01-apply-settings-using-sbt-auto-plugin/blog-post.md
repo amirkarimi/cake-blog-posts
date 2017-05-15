@@ -66,7 +66,7 @@ But you have to be careful to add those plugin-specific common settings to the p
 
 Fortunately we can have SBT to do that for us. You can ask SBT to automatically enable a plugin only for projects on which another specific plugin is enabled. This is possible using SBT **auto plugins**.
 
-Create an Scala file (with `.scala` extension) in your `project` directory which extends `AutoPlugin`. That's how you create SBT auto plugins:
+Create a Scala file (with `.scala` extension) in your `project` directory which extends `AutoPlugin`. That's how you create SBT auto plugins:
 
 ```scala
 import sbt._
