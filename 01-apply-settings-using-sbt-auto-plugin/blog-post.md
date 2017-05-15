@@ -2,7 +2,7 @@
 
 You have a multi-project `build.sbt` and want to apply some settings for all projects in a DRY way.
 
-You can define the common settings earlier and use them later:
+The simplest way is to define the common settings earlier as a `Seq` and use them later:
 
 ```sbt
 lazy val commonSettings = Seq(
