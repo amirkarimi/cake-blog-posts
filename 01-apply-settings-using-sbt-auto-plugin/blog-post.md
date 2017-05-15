@@ -1,6 +1,6 @@
-## Apply settings to multiple projects using SBT auto plugins
+## Applying settings to multiple projects using SBT auto plugins
 
-You have a multi-project build.sbt and want to apply some settings for all of them in a DRY way.
+You have a multi-project `build.sbt` and want to apply some settings for all projects in a DRY way.
 
 You can define the common settings earlier and use them later:
 
@@ -122,4 +122,6 @@ lazy val util = (project in file("util"))
   )
 ```
 
-You can find the sample project of this blog post [here](https://github.com/amirkarimi/cake-blog-posts/tree/master/01-apply-settings-using-sbt-auto-plugin/sample).
+Thanks to auto plugins you'll end up having a cleaner `build.sbt` and you no longer have to worry about assigning the common plugin-related-settings to the projects manually.
+
+You can also find the sample project of this blog post [here](https://github.com/amirkarimi/cake-blog-posts/tree/master/01-apply-settings-using-sbt-auto-plugin/sample).
