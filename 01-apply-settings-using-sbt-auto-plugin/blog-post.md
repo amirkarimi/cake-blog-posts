@@ -122,4 +122,4 @@ lazy val util = (project in file("util"))
   )
 ```
 
-You can find the sample project of this blog post [here](#).
+You can find the sample project of this blog post [here](https://github.com/amirkarimi/cake-blog-posts/tree/master/01-apply-settings-using-sbt-auto-plugin/sample).
