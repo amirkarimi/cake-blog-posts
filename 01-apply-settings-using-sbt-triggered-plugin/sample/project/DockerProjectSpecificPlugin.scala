@@ -9,6 +9,6 @@ object DockerProjectSpecificPlugin extends AutoPlugin {
   override def requires = DockerPlugin
   override def trigger  = allRequirements
   override def projectSettings = Seq(
-    daemonUser in Docker := "test"
+    dockerRepository in Docker := Some("my-repo")
   )
 }
